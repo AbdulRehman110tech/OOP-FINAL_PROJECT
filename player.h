@@ -60,7 +60,7 @@ public :
 		DrawRectangleLinesEx(Rectangle{ (float)posX,(float)posY,(float)width,(float)height }, 3.5, BLACK);
 	}
 
-	void add_power(int a);
+	void add_power(float a);
 	void set_power();
 
 	void draw_special_power(bool facing) {

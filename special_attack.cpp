@@ -1,7 +1,7 @@
 #include "special_attack.h"
 
 special_attack::special_attack() :power{ 0 }, curr_power{ 0 } {}
-special_attack::special_attack(int pr, String _n, int _d, const char* filename) : power{ pr }, curr_power{ 0 }, Attack{_n,_d,filename} {
+special_attack::special_attack(float pr, String _n, float _d, const char* filename) : power{ pr }, curr_power{ 0 }, Attack{_n,_d,filename} {
 	texture = LoadTexture(filename);
 	if (texture.id == 0) {
 		std::cout << "Failed to load texture: " << filename << std::endl;
@@ -24,7 +24,7 @@ bool special_attack::allow_attack() {
 	}
 }
 
-void  special_attack::add_current_power(int sum) {
+void  special_attack::add_current_power(float sum) {
 	if (this->curr_power < this->power) {
 		this->curr_power = this->curr_power + sum;
 	}
@@ -41,10 +41,10 @@ void  special_attack::draw_texture(Vector2 w, bool facingRight) {
 	texture = LoadTexture("assests/fighter(L).png");
 	Rectangle srcRect;
 	if (facingRight) {
-		srcRect = { 0.0f, 0.0f, (float)texture.width, (float)texture.height };  // normal
+		srcRect = { 0.0f, 0.0f, (float)texture.width, (float)texture.height };  
 	}
 	else {
-		srcRect = { (float)texture.width, 0.0f,-(float)texture.width, (float)texture.height };  // flipped
+		srcRect = { (float)texture.width, 0.0f,-(float)texture.width, (float)texture.height };  
 	}
 
 	Rectangle destRect = { w.x, w.y,texture.width / 2,texture.height / 2 };

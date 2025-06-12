@@ -1,27 +1,29 @@
 #include "game_manager.h"
 
 //game_manager::game_manager(const DA <player>& other) : list{other} {}
-void game_manager::show_menue(Vector2 mousePos,const char* filename) {
+void game_manager::show_menue(const char* filename) {
 	bool istrue = true;
 	Texture2D background_menue = LoadTexture(filename);
+	
 	while (istrue) {
 		BeginDrawing();
 		DrawTexturePro(background_menue, Rectangle{ 0, 0, (float)background_menue.width, (float)background_menue.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
-		Rectangle pvpButton1 = { 400, 20, 200, 60 };
-		DrawText("PvP MODE", pvpButton1.x + 40, pvpButton1.y + 15, 20, WHITE);
-		Rectangle pvpButton2 = { 400, 30, 200, 60 };
-		DrawText("LEVEL GAME ", pvpButton2.x + 40, pvpButton2.y + 15, 20, GREEN);
-		Rectangle pvpButton3 = { 400, 40, 200, 60 };
-		DrawText("EXIT", pvpButton3.x + 40, pvpButton3.y + 15, 20, WHITE);
+		Rectangle pvpButton1 = { 250, 50, 200, 60 };
+		DrawText("PvP MODE (P)", pvpButton1.x + 40, pvpButton1.y + 15, 80, WHITE);
+		Rectangle pvpButton2 = { 250, 150, 200, 60 };
+		DrawText("LEVEL GAME (L)", pvpButton2.x + 40, pvpButton2.y + 15, 80, WHITE);
+		Rectangle pvpButton3 = { 250, 250, 200, 60 };
+		DrawText("EXIT (E)", pvpButton3.x + 40, pvpButton3.y + 15, 80, RED);
 		EndDrawing();
-		if (CheckCollisionPointRec(mousePos, pvpButton1) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+		if (IsKeyDown(KEY_P)) {
 			player one, two;
-			this->run_PVP(one, two);
+			this->menue_select_player(one, two,"assests/player.png");
+			
 		}
-		else if (CheckCollisionPointRec(mousePos, pvpButton2) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+		else if (IsKeyDown(KEY_L)) {
 
 		}
-		else if (CheckCollisionPointRec(mousePos, pvpButton3) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+		else if (IsKeyDown(KEY_E)) {
 			istrue = false;
 		}
 		
@@ -32,46 +34,69 @@ void game_manager::show_menue(Vector2 mousePos,const char* filename) {
 void game_manager::menue_select_player(player one,player two,const char* filename) {
 
 	bool istrue1 = true;
-	int i = 0;
+
+	int j = 0;
 	Texture2D backgroun_player = LoadTexture(filename);
+	
 	while (istrue1) {
 		BeginDrawing();
-		DrawText("Choose a given player from given set of players player 1: ", 400, 10, 10, BLACK);
-		DrawText("Press right keyboard button to move to other chracter and Enter to choose one ", 400, 15, 10, BLACK);
-		list[i].DrawCharacter();
-		if (IsKeyDown(KEY_RIGHT)) {
-			i++;
-		} 
-		if (IsKeyDown(KEY_ENTER)) {
-			one = list[i];
+		DrawTexturePro(backgroun_player, Rectangle{ 0, 0, (float)backgroun_player.width, (float)backgroun_player.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
+		DrawText("Choose a given player from given set of players : ", 250, 20, 15, ORANGE);
+		DrawText("Press Spcae bar to go to next charactcer ", 250, 430, 15, RED);
+		
+			if (IsKeyPressed(KEY_SPACE)) {
+				j++;
+				if (j >= list.size()) {
+					j = 0;
+				}
+				
+			}
+			list[j].SetPosition(Vector2{ 400,250 });
+			list[j].DrawCharacter();
+		
+		if (IsKeyPressed(KEY_ENTER)) {
+			one = list[j];
 			istrue1 = false;
 		}
 		EndDrawing();
 	}
+	j = 0;
 	bool istrue2 = true;
 	while (istrue2) {
 		BeginDrawing();
-		DrawText("Choose a given player from given set of players player 2: ", 400, 10, 10, BLACK);
-		DrawText("Press right keyboard button to move to other chracter and Enter to choose one ", 400, 15, 10, BLACK);
-		list[i].DrawCharacter();
-		if (IsKeyDown(KEY_RIGHT)) {
-			i++;
+		DrawText("Choose a given player from given set of players player 2: ", 250, 20, 15, ORANGE);
+		DrawText("Press Spcae bar to go to next charactcer ", 250, 430, 15, RED);
+
+		if (IsKeyPressed(KEY_SPACE)) {
+			j++;
+			if (j >= list.size()) {
+				j = 0;
+			}
+
 		}
-		if (IsKeyDown(KEY_ENTER)) {
-			two = list[i];
+		list[j].SetPosition(Vector2{ 400,250 });
+		list[j].DrawCharacter();
+
+
+		if (IsKeyPressed(KEY_ENTER)) {
+			two = list[j];
 			istrue2 = false;
 		}
 		EndDrawing();
 	}
-
-	UnloadTexture(backgroun_player);
+	
+	this->run_PVP(one,two);
 }
 
 void game_manager::run_PVP(player knight, player knight2) {
 	Texture2D background = LoadTexture("assests/background1.png");
+	knight.SetPosition(Vector2{ 0,300 });
+	knight.chekfacing(true);
+	knight2.SetPosition(Vector2{ 800,300 });
+	knight2.chekfacing(false);
 	bool player1_state = false;
 	bool player2_state = false;
-	while (!WindowShouldClose()) {
+	while (!WindowShouldClose() && knight.return_status() && knight2.return_status()) {
 		BeginDrawing();
 		DrawTexturePro(background, Rectangle{ 0, 0, (float)background.width, (float)background.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
 		knight.DrawRectangle_hp(10, 10, 20);
@@ -87,20 +112,38 @@ void game_manager::run_PVP(player knight, player knight2) {
 			if (IsKeyDown(KEY_J)) {
 				knight.draw_text_call(0, knight.return_facing());
 				player2_state = CheckCollisionRecs(knight.get_Tec(), knight2.get_Tec());
-				knight2.chek_collision(player2_state, knight.return_damage_of_attack(0));
+				if (IsKeyDown(KEY_J)) {
+					knight2.chek_collision(player2_state, knight.return_damage_of_attack(0));
+					if (player2_state) {
+						if (knight2.return_status() == false) {
+							DrawText("Player 1 WON ", 400, 30, 25, BLUE);
+						}
+					}
+				}
 			}
 			else if (IsKeyDown(KEY_K)) {
 				knight.draw_text_call(1, knight.return_facing());
 				player2_state = CheckCollisionRecs(knight.get_Tec(), knight2.get_Tec());
-				knight2.chek_collision(player2_state, knight.return_damage_of_attack(0));
+				if (IsKeyPressed(KEY_K)) {
+					knight2.chek_collision(player2_state, knight.return_damage_of_attack(0));
+					if (player2_state) {
+						if (knight2.return_status() == false) {
+							DrawText("Player 1 WON ", 400, 30, 25, BLUE);
+						}
+					}
+				}
 			}
 			else if (IsKeyDown(KEY_L) && knight.allow_sp_attack()) {
 				knight.draw_special_power(knight.return_facing());
+				// special power ma naam rakhwana ha file ka char aus ka attribute bna de ;
 				player2_state = CheckCollisionRecs(knight.get_Tec(), knight2.get_Tec());
 				knight2.chek_collision(player2_state, knight.return_damage_of_attack(0));
+				if (player2_state) {
+					if (knight2.return_status() == false) {
+						DrawText("Player 1 WON ", 400, 30, 25, BLUE);
+					}
+				}
 				knight.set_power();
-
-
 			}
 
 		}
@@ -115,32 +158,53 @@ void game_manager::run_PVP(player knight, player knight2) {
 			}
 			else {
 				knight.damage_pic(player1_state);
-				knight2.add_power(5);
+				knight2.add_power(0.2);
 				player1_state = false;
 			}
 		}
 
 		if (IsKeyDown(KEY_M) || IsKeyDown(KEY_N) || IsKeyDown(KEY_B)) {
 
-			if (IsKeyDown(KEY_M)) {
+			if (IsKeyPressed(KEY_M)) {
 				bool temp = knight2.return_facing();
 				temp ^= true ^ false;
 				knight2.draw_text_call(0, temp);
 				player1_state = CheckCollisionRecs(knight.get_Tec(), knight2.get_Tec());
-				knight.chek_collision(player1_state, knight2.return_damage_of_attack(0));
+				if (IsKeyPressed(KEY_M)) {
+					knight.chek_collision(player1_state, knight2.return_damage_of_attack(0));
+					if (player1_state) {
+						if (knight.return_status() == false) {
+							DrawText("Player 2 WON ", 400, 30, 25, BLUE);
+							break;
+						}
+					}
+				}
 			}
 			else if (IsKeyDown(KEY_N)) {
 				bool temp = knight2.return_facing();
 				temp ^= true ^ false;
 				knight2.draw_text_call(1, temp);
 				player1_state = CheckCollisionRecs(knight.get_Tec(), knight2.get_Tec());
-				knight.chek_collision(player1_state, knight2.return_damage_of_attack(0));
+				if (IsKeyPressed(KEY_N)) {
+					knight.chek_collision(player1_state, knight2.return_damage_of_attack(0));
+					if (player1_state) {
+						if (knight.return_status() == false) {
+							DrawText("Player 2 WON ", 400, 30, 25, BLUE);
+						}
+					}
+				}
 			}
 			else if (IsKeyDown(KEY_B)) {
 				if (knight2.allow_sp_attack()) {
 					knight2.draw_special_power(knight.return_facing());
 					player1_state = CheckCollisionRecs(knight.get_Tec(), knight2.get_Tec());
 					knight.chek_collision(player1_state, knight2.return_damage_of_attack(0));
+					if (player1_state) {
+						if (knight.return_status() == false) {
+							DrawText("Player 2 WON ", 400, 30, 25, BLUE);
+							break;
+						}
+					}
 					knight2.set_power();
 				}
 			}
@@ -193,6 +257,7 @@ void game_manager::run_PVP(player knight, player knight2) {
 			}
 			knight2.set_facing(true);
 		}
+
 
 	}
 	UnloadTexture(background);

@@ -4,6 +4,7 @@
 #include "player.h"
 #include "arr.h"
 #include "raylib.h"
+#include <vector>
 using namespace std;
 
 class game_manager {
@@ -21,8 +22,22 @@ public :
 			throw "Cannot create two game managers ";
 		}
 	}
-	void show_menue(Vector2 mousePo, const char* filename);
+	void show_menue( const char* filename);
+	void show_charcaters() {
+		int i = 0;
+		while (!WindowShouldClose()) {
+			BeginDrawing();
+			list[i].damage_pic(true);
+			if (IsKeyPressed(KEY_Q)) {
+				i++;
+			}
+			EndDrawing();
+		}
+	}
 	void menue_select_player(player one, player two, const char* filename);
 	void run_PVP(player one, player two);
+	void load_data(const DA<player>& other) {
+		this->list = other;
+	}
 };
 

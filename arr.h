@@ -22,7 +22,7 @@ public:
     DA() {
         len = 0;
         cap = 1;
-        arr = nullptr;
+        arr = new T[cap];
     }
 
 

@@ -20,13 +20,23 @@ protected:
 public:
 	character() = default;
 	character(String _n, int h_p, int Defence) : name{ _n }, H_P{ h_p }, current_hp{ h_p }, Def{ Defence }, status{ true } {};
-	character(const character& other) : name{ other.name }, H_P{ other.H_P }, current_hp{ other.current_hp }, Def{ other.Def }, status{ other.status } {}
+	character(const character& other) : name{ other.name }, H_P{ other.H_P }, current_hp{ other.current_hp }, Def{ other.Def }, status{ other.status }, position{ other.position }, speed{ other.speed }, frameRec{other.frameRec} {
+		Image temp = LoadImageFromTexture(other.texture);
+		texture = LoadTextureFromImage(temp);
+		UnloadImage(temp);
+	}
 	character& operator=(const character& other) {
 		this->name = other.name;
 		this->current_hp = other.current_hp;
 		this->H_P = other.H_P;
 		this->Def = other.Def;
 		this->status = other.status;
+		Image tempale = LoadImageFromTexture(other.texture);
+		texture = LoadTextureFromImage(tempale);
+		UnloadImage(tempale);
+		this->position = other.position;
+		this->speed = other.speed;
+		this->frameRec = other.frameRec;
 		return *this;
 	}
 	virtual ~character() {}
@@ -119,7 +129,7 @@ public:
 		
 		}
 			
-	 
+		Texture2D return_texture() { return this->texture; }
 		
 };
 

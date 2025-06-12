@@ -4,12 +4,20 @@
 
 player::player() :score{ 0 }, only{}, moves{}, facing{true} {}
 player::player(const String& _n, int h_p, int Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename) : only{ others }, moves{ other }, character{ _n, h_p, Defence }, score{ 0 }, facing{ true } { temp = LoadTexture(filename); }
-player::player(const player& other) : score{ other.score } , character{ other }, moves{ other.moves }, only{other.only} {}
+player::player(const player& other) : score{ other.score }, character{ other }, moves{ other.moves }, only{ other.only } {
+	Image temp1 = LoadImageFromTexture(other.temp);
+	temp = LoadTextureFromImage(temp1);
+	UnloadImage(temp1);
+}
+
 player& player::operator=(const player& other) {
 	this->score = other.score;
 	this->moves = other.moves;
 	this->facing = other.facing;
 	this->only = other.only;
+	Image temp1 = LoadImageFromTexture(other.temp);
+	temp = LoadTextureFromImage(temp1);
+	UnloadImage(temp1);
 	this->character::operator=(other);
 	return *this;
 }
@@ -55,7 +63,7 @@ void player::chek_collision(bool istrue, int base_damage) {
 	}
 }
 
-void player::add_power(int a) {
+void player::add_power(float a) {
 	this->only.add_current_power(a);
 }
 

@@ -8,7 +8,7 @@ class Simple_Attack : public Attack {
 
 public : 
 	Simple_Attack() = default;
-	Simple_Attack(int damage_per, String _n,const char* filename) : Attack(_n, damage_per,filename) {
+	Simple_Attack(float damage_per, String _n,const char* filename) : Attack(_n, damage_per,filename) {
 		texture = LoadTexture(filename);
 	}
 	Simple_Attack(const Simple_Attack& other) : Attack(other) {};
