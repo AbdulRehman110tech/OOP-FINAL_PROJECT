@@ -23,7 +23,7 @@ int main(){
 	knight2.LoadTextureFromFile("assests/fighter1.png");
 	knight2.SetPosition({ 800, 300 });
 	knight2.SetSpeed(0.5f);
-	cout << "Hello world how are you wht are you doing " << endl;
+	cout << "Hello world how are you wht are you doing whts new in this world" << endl;
 
 	DA<player>p(knight);
 	p.add(knight2);
