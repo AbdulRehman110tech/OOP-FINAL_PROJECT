@@ -1,0 +1,34 @@
+﻿  bscs24149_UP BATTLE PROJECT.cpp
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(90,77): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(103,81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(117,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(117,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(117,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(117,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\simple_attack.h(26,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\simple_attack.h(26,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\simple_attack.h(26,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\simple_attack.h(26,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
+  
+  bscs24149_UP BATTLE PROJECT.vcxproj -> C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\x64\Debug\bscs24149_UP BATTLE PROJECT.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

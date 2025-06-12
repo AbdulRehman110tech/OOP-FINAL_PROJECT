@@ -1,0 +1,3 @@
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\x64\Debug\raylib.dll
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\x64\Debug\glfw3.dll
+C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\bscs2414.b56c9fe6\x64\Debug\bscs2414.C50DC960.Up2Date
