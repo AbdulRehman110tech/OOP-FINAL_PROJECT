@@ -1,0 +1,25 @@
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+*.sdf
+*.vc.db
+*.vscode/
+*.VC.db
+*.ipch/
+*.aps
+*.ncb
+*.obj
+*.log
+*.tlog
+*.cache
+*.ilk
+*.pdb
+*.idb
+*.tmp
+*.log
+*.exe
+*.dll
+*.lib
+*.bak
+*.vsidx

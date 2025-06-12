@@ -11,10 +11,11 @@ class game_manager {
 static game_manager* instance;
 game_manager() = default;
 game_manager(const DA <player>& other);
+~game_manager() {};
 public :
-	void get_instance() {
-		if (this->instance == nullptr) {
-			instance = new game_manager();
+	static game_manager* get_instance() {
+		if (instance == nullptr) {
+		return	instance = new game_manager();
 		}
 		else {
 			throw "Cannot create two game managers ";

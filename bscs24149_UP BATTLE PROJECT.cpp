@@ -4,8 +4,10 @@
 #include "simple_attack.h"
 #include "raylib.h"
 #include "special_attack.h"
+#include "game_manager.h"
 using namespace std;
 
+game_manager * game_manager::instance = nullptr;
 int main(){
 	InitWindow(1000, 470, "Battle Game");
 	
@@ -21,9 +23,17 @@ int main(){
 	knight2.LoadTextureFromFile("assests/fighter1.png");
 	knight2.SetPosition({ 800, 300 });
 	knight2.SetSpeed(0.5f);
-	
+	cout << "Hello world how are you wht are you doing " << endl;
 
-	
+	DA<player>p(knight);
+	p.add(knight2);
+	try {
+		game_manager* g = game_manager::get_instance();
+		
+	}
+	catch (const String& other) {
+		cout << other;
+	}
 	CloseWindow();
 return 0;
 }
