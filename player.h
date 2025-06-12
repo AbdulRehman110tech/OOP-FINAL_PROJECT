@@ -12,10 +12,10 @@ class player : public character {
 	DA<Simple_Attack> moves;
 	bool facing;
 	special_attack only;
-
+	Texture2D temp;
 public : 
 	player();
-	player(const String& _n, int h_p, int Defence, DA <Simple_Attack>& other ,const special_attack& others);
+	player(const String& _n, int h_p, int Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename);
 	player(const player& other);
 	player& operator=(const player& other);
 
@@ -37,13 +37,10 @@ public :
 
 	void chek_collision(bool istrue, int base_damage) ;
 
-	void damage_pic(bool collision,const char* filename) {
+	void damage_pic(bool collision) {
 		if (collision) {
-			Texture2D temp = LoadTexture(filename);
 			DrawTextureEx(temp,position,0.0f,0.5f, WHITE);
-		//	UnloadTexture(temp);
 	}
-
 	}
 
 	void DrawRectangle_hp(int x, int y, int height) {
@@ -72,6 +69,11 @@ public :
 
 	void unload_Special_attack() {
 		this->only.unload_texture();
+	}
+	~player() {
+		this->unloadtexture();
+		this->unloading();
+		this->unload_Special_attack();
 	}
 };
 

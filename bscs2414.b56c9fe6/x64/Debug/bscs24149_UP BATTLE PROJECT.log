@@ -1,34 +1,107 @@
 ﻿  bscs24149_UP BATTLE PROJECT.cpp
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(90,77): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(90,77): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(103,81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(103,81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(117,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(117,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(117,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\character.h(117,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\simple_attack.h(26,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\simple_attack.h(26,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\simple_attack.h(26,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\simple_attack.h(26,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'bscs24149_UP%20BATTLE%20PROJECT.cpp')
   
-  bscs24149_UP BATTLE PROJECT.vcxproj -> C:\Users\hp\Desktop\lab 11\bscs24149_UP BATTLE PROJECT\x64\Debug\bscs24149_UP BATTLE PROJECT.exe
+  game_manager.cpp
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(90,77): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(103,81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'game_manager.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(11,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(11,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(13,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(13,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(15,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(15,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  player.cpp
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(90,77): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(103,81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\character.h(117,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,63): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,80): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\simple_attack.h(26,80): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'player.cpp')
+  
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\player.cpp(41,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\player.cpp(42,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\arr.h(88,1): warning C4715: 'DA<Simple_Attack>::operator[]': not all control paths return a value
+C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\arr.h(88,1): warning C4715: 'DA<player>::operator[]': not all control paths return a value
+  bscs24149_UP BATTLE PROJECT.vcxproj -> C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\x64\Debug\bscs24149_UP BATTLE PROJECT.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

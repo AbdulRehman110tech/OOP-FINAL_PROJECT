@@ -3,7 +3,7 @@
 
 
 player::player() :score{ 0 }, only{}, moves{}, facing{true} {}
-player::player(const String& _n, int h_p, int Defence, DA <Simple_Attack>& other ,const special_attack& others) : only{ others }, moves{ other }, character{ _n, h_p, Defence }, score{ 0 }, facing{true} {}
+player::player(const String& _n, int h_p, int Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename) : only{ others }, moves{ other }, character{ _n, h_p, Defence }, score{ 0 }, facing{ true } { temp = LoadTexture(filename); }
 player::player(const player& other) : score{ other.score } , character{ other }, moves{ other.moves }, only{other.only} {}
 player& player::operator=(const player& other) {
 	this->score = other.score;
