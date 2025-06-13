@@ -46,7 +46,7 @@ void  special_attack::draw_texture(Vector2 w, bool facingRight) {
 		srcRect = { (float)texture.width, 0.0f,-(float)texture.width, (float)texture.height };  
 	}
 
-	Rectangle destRect = { w.x, w.y,texture.width / 2,texture.height / 2 };
+	Rectangle destRect = { w.x, w.y,texture.width/2 ,texture.height/2  };
 	
 	DrawTexturePro(texture, srcRect, destRect, Vector2{ 0,0 }, 0.0f, WHITE);
 }

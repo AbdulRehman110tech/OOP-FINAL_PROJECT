@@ -14,6 +14,7 @@ public :
 	void set_current_power();
 	int return_power() { return this->curr_power; }
 	void add_current_power(float sum);
+	
 	void draw_texture(Vector2 w, bool facingright)override;
 	void unload_texture() override { UnloadTexture(texture); }
 };

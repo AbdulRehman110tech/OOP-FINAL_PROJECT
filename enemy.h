@@ -16,13 +16,17 @@ public :
 	enemy&  operator=(const enemy & other); 
   void receiveDamage(int base_damage);
   void movecharacter(float x) {
-	  if (position.x < x) {
-		  position.x += speed;
+	  if (!this->chekposition_x(1000, 470)) {
+		  if (position.x < x) {
+			  position.x += speed;
+			  this->set_right_face(true);
+		  }
+		  else if (position.x > x) {
+			  position.x -= speed;
+			  this->set_right_face(false);
+		  }
 	  }
-	  else if(position.x > x){
-		  position.x -= speed;
-	  }
-		 
+	 
   }
 
   Rectangle get_Tec() {
