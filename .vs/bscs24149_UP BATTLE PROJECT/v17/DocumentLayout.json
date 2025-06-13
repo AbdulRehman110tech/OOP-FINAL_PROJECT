@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:game_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\bscs24149_UP BATTLE PROJECT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:bscs24149_UP BATTLE PROJECT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:special_attack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -19,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:game_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\simple_attack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:simple_attack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:special_attack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\bscs24149_UP BATTLE PROJECT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:bscs24149_UP BATTLE PROJECT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\attack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -94,55 +94,28 @@
               "Title": "game_manager.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.cpp",
               "RelativeDocumentMoniker": "game_manager.cpp",
-              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.cpp*",
-              "RelativeToolTip": "game_manager.cpp*",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAIwHsAAABMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.cpp",
+              "RelativeToolTip": "game_manager.cpp",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAAFwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-12T11:05:40.991Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "special_attack.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.cpp",
-              "RelativeDocumentMoniker": "special_attack.cpp",
-              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.cpp",
-              "RelativeToolTip": "special_attack.cpp",
-              "ViewState": "AgIAACMAAAAAAAAAAAD4vy4AAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-12T11:05:42.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "string.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.cpp",
-              "RelativeDocumentMoniker": "string.cpp",
-              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.cpp",
-              "RelativeToolTip": "string.cpp",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAgwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-12T11:05:42.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "player.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.h",
               "RelativeDocumentMoniker": "player.h",
               "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.h",
               "RelativeToolTip": "player.h",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAD4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAD4vxEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:46.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:46.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "game_manager.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.h",
               "RelativeDocumentMoniker": "game_manager.h",
@@ -150,12 +123,11 @@
               "RelativeToolTip": "game_manager.h",
               "ViewState": "AgIAAA8AAAAAAAAAAAAIwB8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:47.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:47.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "simple_attack.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\simple_attack.h",
               "RelativeDocumentMoniker": "simple_attack.h",
@@ -163,12 +135,11 @@
               "RelativeToolTip": "simple_attack.h",
               "ViewState": "AgIAAAcAAAAAAAAAAAD4vxAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:45.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:45.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "special_attack.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.h",
               "RelativeDocumentMoniker": "special_attack.h",
@@ -176,25 +147,23 @@
               "RelativeToolTip": "special_attack.h",
               "ViewState": "AgIAAAYAAAAAAAAAAAD4vw8AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:44.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:44.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "player.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp",
               "RelativeDocumentMoniker": "player.cpp",
               "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp",
               "RelativeToolTip": "player.cpp",
-              "ViewState": "AgIAABUAAAAAAAAAAAD4vx4AAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-12T11:05:41.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:41.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "character.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\character.h",
               "RelativeDocumentMoniker": "character.h",
@@ -202,8 +171,7 @@
               "RelativeToolTip": "character.h",
               "ViewState": "AgIAADgAAAAAAAAAAAAAAD8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:48.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:48.693Z"
             },
             {
               "$type": "Document",
@@ -215,21 +183,43 @@
               "RelativeToolTip": "attack.h",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:49.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:49.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "bscs24149_UP BATTLE PROJECT.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\bscs24149_UP BATTLE PROJECT.cpp",
               "RelativeDocumentMoniker": "bscs24149_UP BATTLE PROJECT.cpp",
               "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\bscs24149_UP BATTLE PROJECT.cpp",
               "RelativeToolTip": "bscs24149_UP BATTLE PROJECT.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-12T11:05:36.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:36.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "string.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.cpp",
+              "RelativeDocumentMoniker": "string.cpp",
+              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.cpp",
+              "RelativeToolTip": "string.cpp",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-12T11:05:42.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "special_attack.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.cpp",
+              "RelativeDocumentMoniker": "special_attack.cpp",
+              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.cpp",
+              "RelativeToolTip": "special_attack.cpp",
+              "ViewState": "AgIAACMAAAAAAAAAAAD4vy4AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-12T11:05:42.115Z"
             },
             {
               "$type": "Document",
@@ -241,8 +231,7 @@
               "RelativeToolTip": "arr.h",
               "ViewState": "AgIAACsAAAAAAAAAAAAgwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:50.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:50.553Z"
             },
             {
               "$type": "Document",
@@ -254,8 +243,7 @@
               "RelativeToolTip": "resource.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:46.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:46.239Z"
             },
             {
               "$type": "Document",

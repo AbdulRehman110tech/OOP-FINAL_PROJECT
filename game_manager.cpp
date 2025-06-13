@@ -91,9 +91,7 @@ void game_manager::menue_select_player(player one,player two,const char* filenam
 void game_manager::run_PVP(player knight, player knight2) {
 	Texture2D background = LoadTexture("assests/background1.png");
 	knight.SetPosition(Vector2{ 0,300 });
-	knight.chekfacing(true);
 	knight2.SetPosition(Vector2{ 800,300 });
-	knight2.chekfacing(false);
 	bool player1_state = false;
 	bool player2_state = false;
 	while (!WindowShouldClose() && knight.return_status() && knight2.return_status()) {
@@ -112,7 +110,7 @@ void game_manager::run_PVP(player knight, player knight2) {
 			if (IsKeyDown(KEY_J)) {
 				knight.draw_text_call(0, knight.return_facing());
 				player2_state = CheckCollisionRecs(knight.get_Tec(), knight2.get_Tec());
-				if (IsKeyDown(KEY_J)) {
+				if (IsKeyPressed(KEY_J)) {
 					knight2.chek_collision(player2_state, knight.return_damage_of_attack(0));
 					if (player2_state) {
 						if (knight2.return_status() == false) {
@@ -153,7 +151,7 @@ void game_manager::run_PVP(player knight, player knight2) {
 					knight.DrawCharacter();
 				}
 				else {
-					knight.chekfacing(false);
+					knight.chekfacing(true);
 				}
 			}
 			else {
@@ -165,7 +163,7 @@ void game_manager::run_PVP(player knight, player knight2) {
 
 		if (IsKeyDown(KEY_M) || IsKeyDown(KEY_N) || IsKeyDown(KEY_B)) {
 
-			if (IsKeyPressed(KEY_M)) {
+			if (IsKeyDown(KEY_M)) {
 				bool temp = knight2.return_facing();
 				temp ^= true ^ false;
 				knight2.draw_text_call(0, temp);
