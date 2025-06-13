@@ -15,12 +15,12 @@ protected:
 	Texture2D texture;
 	Vector2 position;
 	float speed;
-	Rectangle frameRec;
+	
 
 public:
 	character() = default;
 	character(String _n, int h_p, int Defence) : name{ _n }, H_P{ h_p }, current_hp{ h_p }, Def{ Defence }, status{ true } {};
-	character(const character& other) : name{ other.name }, H_P{ other.H_P }, current_hp{ other.current_hp }, Def{ other.Def }, status{ other.status }, position{ other.position }, speed{ other.speed }, frameRec{other.frameRec} {
+	character(const character& other) : name{ other.name }, H_P{ other.H_P }, current_hp{ other.current_hp }, Def{ other.Def }, status{ other.status }, position{ other.position }, speed{ other.speed } {
 		Image temp = LoadImageFromTexture(other.texture);
 		texture = LoadTextureFromImage(temp);
 		UnloadImage(temp);
@@ -36,7 +36,7 @@ public:
 		UnloadImage(tempale);
 		this->position = other.position;
 		this->speed = other.speed;
-		this->frameRec = other.frameRec;
+		
 		return *this;
 	}
 	virtual ~character() {}
@@ -56,7 +56,7 @@ public:
 
 	void LoadTextureFromFile(const char* filePath) {
 		texture = LoadTexture(filePath);
-		frameRec = { 0.0f, 0.0f, (float)texture.width, (float)texture.height };
+	
 	}
 
 		void DrawCharacter() {

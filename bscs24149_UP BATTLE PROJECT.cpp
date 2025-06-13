@@ -16,15 +16,14 @@ int main(){
 	special_attack s(100,"Blast",5,"assests/fighter(L).png");
 	player knight("Sir Braver", 200, 0,a,s, "assests/fighter1(D).png");
 	knight.LoadTextureFromFile("assests/fighter1.png");
-
-	knight.SetSpeed(0.5f);
+	knight.SetSpeed(10.0f);
 
 	DA <Simple_Attack> a2(Simple_Attack(3, "Punch", "assests/fighter2(M).png"));
 	a2.add(Simple_Attack(3, "Kick", "assests/fighter2(N).png"));
 	special_attack s2(100, "Blast", 5, "assests/fighter2(B).png");
 	player knight2("Sir Braver", 200,0, a2,s2, "assests/fighter2(D).png");
 	knight2.LoadTextureFromFile("assests/fighter2.png");
-	knight2.SetSpeed(0.5f);
+	knight2.SetSpeed(10.0f);
 	
 	DA<player>p;p = knight;p.add(knight2);
 

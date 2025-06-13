@@ -41,7 +41,6 @@ C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(14,62): warning C424
 C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(14,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(16,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(16,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\game_manager.cpp(159,23): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\arr.h(88,1): warning C4715: 'DA<player>::operator[]': not all control paths return a value
   bscs24149_UP BATTLE PROJECT.vcxproj -> C:\Users\hp\Source\Repos\OOP-FINAL_PROJECT\x64\Debug\bscs24149_UP BATTLE PROJECT.exe
   'pwsh.exe' is not recognized as an internal or external command,

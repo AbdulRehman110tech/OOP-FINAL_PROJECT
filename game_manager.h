@@ -34,8 +34,8 @@ public :
 			EndDrawing();
 		}
 	}
-	void menue_select_player(player one, player two, const char* filename);
-	void run_PVP(player one, player two);
+	void menue_select_player( const char* filename);
+	void run_PVP(int index1,int index2);
 	void load_data(const DA<player>& other) {
 		this->list = other;
 	}

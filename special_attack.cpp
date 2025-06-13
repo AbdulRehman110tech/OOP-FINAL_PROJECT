@@ -38,7 +38,6 @@ void special_attack::set_current_power(){
 }
 
 void  special_attack::draw_texture(Vector2 w, bool facingRight) {
-	texture = LoadTexture("assests/fighter(L).png");
 	Rectangle srcRect;
 	if (facingRight) {
 		srcRect = { 0.0f, 0.0f, (float)texture.width, (float)texture.height };  
