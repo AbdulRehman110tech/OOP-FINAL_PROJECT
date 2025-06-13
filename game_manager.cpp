@@ -108,7 +108,6 @@ void game_manager::run_PVP(int index1,int index2) {
 		two.draw_power_bar(880, 28, 10);
 		two.draw_border_of_power(880, 28, 101, 11);
 		if (IsKeyDown(KEY_J) || IsKeyDown(KEY_K) || IsKeyDown(KEY_L)) {
-
 			if (IsKeyDown(KEY_J)) {
 				one.draw_text_call(0, one.return_facing());
 				player2_state = CheckCollisionRecs(one.get_Tec(), two.get_Tec());
@@ -137,6 +136,7 @@ void game_manager::run_PVP(int index1,int index2) {
 			}
 			else if (IsKeyDown(KEY_L) && one.allow_sp_attack()) {
 				float drawtime = 0.2f;
+				// is ma allow attack ko rakh as chek jab trye ho to okay kar de andar rakh is key released while ke sath aur aus ma sirf picture rakh de ;
 				while (drawtime >= 0.0f) {
 					one.draw_special_power(one.return_facing());
 					drawtime -= GetFrameTime();
@@ -164,7 +164,6 @@ void game_manager::run_PVP(int index1,int index2) {
 			}
 			else {
 				one.damage_pic(player1_state);
-				
 				player1_state = false;
 			}
 		}

@@ -75,6 +75,11 @@ public :
 		this->unloading();
 		this->unload_Special_attack();
 	}
+
+	int return_position_of_x() {
+		return  this->position.x;
+	}
+
 };
 
 

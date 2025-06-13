@@ -3,48 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\bscs24149_UP BATTLE PROJECT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:bscs24149_UP BATTLE PROJECT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:game_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\bscs24149_UP BATTLE PROJECT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:bscs24149_UP BATTLE PROJECT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:special_attack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:game_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:string.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:string.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\simple_attack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:simple_attack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:game_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:string.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -59,16 +67,8 @@
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:arr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\boss.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:boss.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B56C9FE6-E3CD-49F2-8F2B-79799BFFD3B3}|bscs24149_UP BATTLE PROJECT.vcxproj|solutionrelative:string.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,57 +90,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "game_manager.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.cpp",
-              "RelativeDocumentMoniker": "game_manager.cpp",
-              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.cpp",
-              "RelativeToolTip": "game_manager.cpp",
-              "ViewState": "AgIAAAgBAAAAAAAAAAAAABMBAACJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-12T11:05:40.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "simple_attack.h",
-              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\simple_attack.h",
-              "RelativeDocumentMoniker": "simple_attack.h",
-              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\simple_attack.h",
-              "RelativeToolTip": "simple_attack.h",
-              "ViewState": "AgIAAAcAAAAAAAAAAAD4vxAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:45.38Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "player.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp",
-              "RelativeDocumentMoniker": "player.cpp",
-              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp",
-              "RelativeToolTip": "player.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-12T11:05:41.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "character.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\character.h",
               "RelativeDocumentMoniker": "character.h",
               "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\character.h",
               "RelativeToolTip": "character.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAwHUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-12T11:05:48.693Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "attack.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\attack.h",
               "RelativeDocumentMoniker": "attack.h",
@@ -152,20 +115,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "bscs24149_UP BATTLE PROJECT.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\bscs24149_UP BATTLE PROJECT.cpp",
               "RelativeDocumentMoniker": "bscs24149_UP BATTLE PROJECT.cpp",
               "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\bscs24149_UP BATTLE PROJECT.cpp",
               "RelativeToolTip": "bscs24149_UP BATTLE PROJECT.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAQwJ0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-12T11:05:36.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "special_attack.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.cpp",
               "RelativeDocumentMoniker": "special_attack.cpp",
@@ -178,46 +141,111 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "player.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.h",
               "RelativeDocumentMoniker": "player.h",
               "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.h",
               "RelativeToolTip": "player.h",
-              "ViewState": "AgIAADgAAAAAAAAAAAD4v0IAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAwC8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-12T11:05:46.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "enemy.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\enemy.cpp",
               "RelativeDocumentMoniker": "enemy.cpp",
               "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\enemy.cpp",
               "RelativeToolTip": "enemy.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-12T11:05:40.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "enemy.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\enemy.h",
               "RelativeDocumentMoniker": "enemy.h",
               "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\enemy.h",
               "RelativeToolTip": "enemy.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-12T11:05:48.168Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
+              "Title": "resource.h",
+              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\resource.h",
+              "RelativeDocumentMoniker": "resource.h",
+              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\resource.h",
+              "RelativeToolTip": "resource.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-12T11:05:46.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "string.h",
+              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.h",
+              "RelativeDocumentMoniker": "string.h",
+              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.h",
+              "RelativeToolTip": "string.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-12T11:05:44.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "game_manager.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.cpp",
+              "RelativeDocumentMoniker": "game_manager.cpp",
+              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.cpp",
+              "RelativeToolTip": "game_manager.cpp",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAGoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-12T11:05:40.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "player.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp",
+              "RelativeDocumentMoniker": "player.cpp",
+              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\player.cpp",
+              "RelativeToolTip": "player.cpp",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-12T11:05:41.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "simple_attack.h",
+              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\simple_attack.h",
+              "RelativeDocumentMoniker": "simple_attack.h",
+              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\simple_attack.h",
+              "RelativeToolTip": "simple_attack.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-12T11:05:45.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "special_attack.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\special_attack.h",
               "RelativeDocumentMoniker": "special_attack.h",
@@ -229,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "game_manager.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\game_manager.h",
               "RelativeDocumentMoniker": "game_manager.h",
@@ -237,12 +265,11 @@
               "RelativeToolTip": "game_manager.h",
               "ViewState": "AgIAABwAAAAAAAAAAAD4vyQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:47.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T11:05:47.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "string.cpp",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.cpp",
               "RelativeDocumentMoniker": "string.cpp",
@@ -254,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "arr.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\arr.h",
               "RelativeDocumentMoniker": "arr.h",
@@ -266,19 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "resource.h",
-              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\resource.h",
-              "RelativeDocumentMoniker": "resource.h",
-              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\resource.h",
-              "RelativeToolTip": "resource.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:46.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "boss.h",
               "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\boss.h",
               "RelativeDocumentMoniker": "boss.h",
@@ -287,18 +302,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-12T11:05:49.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "string.h",
-              "DocumentMoniker": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.h",
-              "RelativeDocumentMoniker": "string.h",
-              "ToolTip": "C:\\Users\\hp\\Source\\Repos\\OOP-FINAL_PROJECT\\string.h",
-              "RelativeToolTip": "string.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-12T11:05:44.021Z"
             }
           ]
         }
