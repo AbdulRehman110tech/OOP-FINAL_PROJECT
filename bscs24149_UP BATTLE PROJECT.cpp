@@ -15,25 +15,24 @@ int main(){
 	
 	DA <Simple_Attack> a (Simple_Attack(3, "Punch", "assests/fighter1(J).png"));
 	a.add(Simple_Attack(5, "Kick", "assests/fighter1(K).png"));
+	a.add(Simple_Attack(10, "Blast", "assests/fighter(L).png"));
 	special_attack s(100,"Blast",10,"assests/fighter(L).png");
 	player knight("Sir Braver", 200, 0,a,s, "assests/fighter1(D).png");
 	knight.LoadTextureFromFile("assests/fighter1.png");
 	knight.SetSpeed(10.0f);
 	knight.SetPosition(Vector2{ 0,300 });
 
-	enemy e("kuta", 100, 0, "falto",1, "assests/little(attack).png","assests/gorilla(damage).png");
+	enemy e("kuta",50, 0, "falto",1, "assests/little(attack).png","assests/gorilla(damage).png");
 	e.LoadTextureFromFile("assests/little(idle).png");e.SetSpeed(2.0f);
+
+	DA<enemy> e1(e);
+	e1.add(e); e1.add(e);
+
 	Vector2 playerPos = knight.GetPosition();  // Get player's current position
-	Vector2 enemyPos;
 
-	do {
-		float randX = (float)(rand() % 1000);  // Random X
-		enemyPos = Vector2{ randX, 300 };      // Fixed Y for simplicity
-	} while (fabs(enemyPos.x - playerPos.x) < 100);  // Avoid overlapping zone (100 px)
-
-	// Set enemy position
-	e.SetPosition(enemyPos);
-
+	for (int i = 0;i < e1.size();i++) {
+		e1[i].setting_position(playerPos);
+	}
 	//DA <Simple_Attack> a2(Simple_Attack(3, "Punch", "assests/fighter2(M).png"));
 	//a2.add(Simple_Attack(3, "Kick", "assests/fighter2(N).png"));
 	//special_attack s2(100, "Blast", 5, "assests/fighter2(B).png");
@@ -74,53 +73,67 @@ int main(){
 		}
 
 	if (move == false) {
-			e.movecharacter(knight.return_position_of_x());
+		for (int i = 0;i < e1.size();i++) {
+			e1[i].movecharacter(knight.return_position_of_x());
+		}	
 	}
 
 		if (IsKeyDown(KEY_J) || IsKeyDown(KEY_K) || IsKeyDown(KEY_L)) {
 			if (IsKeyDown(KEY_J)) {
 				knight.draw_text_call(0, knight.return_facing());
-				e.set_state( CheckCollisionRecs(knight.get_Tec(), e.get_Tec()));
+				for (int i = 0;i < e1.size();i++) {
+					e1[i].set_state(CheckCollisionRecs(knight.get_Tec(), e1[i].get_Tec()));
+				}
 				if (IsKeyPressed(KEY_J)) {
-					e.chek_collision(e.return_set_state(), knight.return_damage_of_attack(0));
-					if (e.return_set_state()) {
-						knight.add_power(5);
-						if (e.return_status() == false) {
-							 break;
+					for (int i = 0;i < e1.size();i++) {
+						e1[i].chek_collision(e1[i].return_set_state(), knight.return_damage_of_attack(0));
+					if (e1[i].return_set_state()) {
+						knight.add_power(3);
+						if (e1[i].return_status() == false) {
+							e1.remove_at(i);
 						}
 					}
+				}
+
 				}
 			}
 
 			else if (IsKeyDown(KEY_K)) {
-				knight.draw_text_call(1, knight.return_facing());
-				e.set_state(CheckCollisionRecs(knight.get_Tec(), e.get_Tec()));
+				knight.draw_text_call(0, knight.return_facing());
+				for (int i = 0;i < e1.size();i++) {
+					e1[i].set_state(CheckCollisionRecs(knight.get_Tec(), e1[i].get_Tec()));
+				}
 				if (IsKeyPressed(KEY_K)) {
-					e.chek_collision(e.return_set_state(), knight.return_damage_of_attack(1));
-					if (e.return_set_state()) {
-						knight.add_power(5);
-						if (e.return_status() == false) {
-							break;
+					for (int i = 0;i < e1.size();i++) {
+						e1[i].chek_collision(e1[i].return_set_state(), knight.return_damage_of_attack(0));
+						if (e1[i].return_set_state()) {
+							knight.add_power(4);
+							if (e1[i].return_status() == false) {
+								e1.remove_at(i);
+							}
 						}
 					}
+
 				}
 			}
 
 
-			else if (IsKeyPressed(KEY_L) /*&& knight.allow_sp_attack()*/) {
-				// is ma allow attack ko rakh as chek jab trye ho to okay kar de andar rakh is key released while ke sath aur aus ma sirf picture rakh de ;
-				e.set_state(CheckCollisionRecs(knight.get_Tec(), e.get_Tec()));
-				knight.draw_special_power(knight.return_facing());
+			else if (IsKeyPressed(KEY_L) && knight.allow_sp_attack()) {
+				knight.draw_text_call(2, knight.return_facing());
+				for (int i = 0;i < e1.size();i++) {
+					e1[i].set_state(CheckCollisionRecs(knight.get_Tec(), e1[i].get_Tec()));
+				}
 				if (IsKeyPressed(KEY_L)) {
-					e.chek_collision(e.return_set_state(), knight.return_dm_of_special());
-					if (e.return_set_state()) {
-						if (e.return_status() == false) {
-							break;
+					for (int i = 0;i < e1.size();i++) {
+						e1[i].chek_collision(e1[i].return_set_state(), knight.return_damage_of_attack(0));
+						if (e1[i].return_set_state()) {
+							if (e1[i].return_status() == false) {
+								e1.remove_at(i);
+							}
 						}
 					}
+					knight.set_power();
 				}
-		
-				knight.set_power();
 			}
 		}
 		else {
@@ -154,34 +167,36 @@ int main(){
 			knight.set_facing(false);
 	
 		}
-		player1_state = CheckCollisionRecs(knight.get_Tec(), e.get_Tec());
-		// player  movement 
-		if (player1_state && !(IsKeyDown(KEY_J)) && !(IsKeyDown(KEY_K)) && !(IsKeyDown(KEY_L))) {
-			
-				e.draw_text_call(e.return_moving_right());
-				knight.chek_collision(player1_state, e.return_damage_of_attack());
+
+		for (int i = 0;i < e1.size();i++) {
+			player1_state = CheckCollisionRecs(knight.get_Tec(), e1[i].get_Tec());
+			// player  movement 
+			if (player1_state && !(IsKeyDown(KEY_J)) && !(IsKeyDown(KEY_K)) && !(IsKeyDown(KEY_L))) {
+				e1[i].draw_text_call(e1[i].return_moving_right());
+				knight.chek_collision(player1_state, e1[i].return_damage_of_attack());
 				if (knight.return_status() == false) {
 					break;
 				}
-			
-		}
-		else {
-			if (!e.return_set_state()) {
-				if (e.return_moving_right()) {
-					e.DrawCharacter();
-				}
-				else {
-					e.chekfacing(false);
-				}
+
 			}
 			else {
-				e.damage_pic(true);
-				e.DrawRectangle_hp(780, 10, 20);
-				e.DrawRectangleLines_hp(780, 10, 201, 21);
-				e.set_state(false);
+				if (!e1[i].return_set_state()) {
+					if (e1[i].return_moving_right()) {
+						e1[i].DrawCharacter();
+					}
+					else {
+						e1[i].chekfacing(false);
+					}
+				}
+				else {
+					e1[i].damage_pic(true);
+					e1[i].DrawRectangle_hp(780-i*220, 10, 20);
+					e1[i].DrawRectangleLines_hp(780 - i * 220, 10, 201, 21);
+					e1[i].set_state(false);
+				}
 			}
 		}
-
+		
 		EndDrawing();
 	}
 	UnloadTexture(background);

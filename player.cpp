@@ -23,7 +23,7 @@ player& player::operator=(const player& other) {
 }
 
 
-int player::return_damage_of_attack(int a) {
+float player::return_damage_of_attack(int a) {
 	return this->moves[a].return_damage();
 }
 
@@ -40,7 +40,7 @@ bool player::allow_sp_attack() {
 	return this->only.allow_attack();
 }
 
-int player::return_dm_of_special() {
+float player::return_dm_of_special() {
 	return this->only.return_damage();
 }
 

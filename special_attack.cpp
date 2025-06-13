@@ -37,17 +37,16 @@ void special_attack::set_current_power(){
 	this->curr_power = 0;
 }
 
-void  special_attack::draw_texture(Vector2 w, bool facingRight) {
+void  special_attack::draw_texture(Vector2 position, bool facingRight) {
 	Rectangle srcRect;
 	if (facingRight) {
-		srcRect = { 0.0f, 0.0f, (float)texture.width, (float)texture.height };  
+		srcRect = { 0.0f, 0.0f, (float)texture.width, (float)texture.height };  // normal
 	}
 	else {
-		srcRect = { (float)texture.width, 0.0f,-(float)texture.width, (float)texture.height };  
+		srcRect = { (float)texture.width, 0.0f,-(float)texture.width, (float)texture.height };  // flipped
 	}
 
-	Rectangle destRect = { w.x, w.y,texture.width/2 ,texture.height/2  };
-	
+	Rectangle destRect = { position.x, position.y,texture.width / 2,texture.height / 2 };
 	DrawTexturePro(texture, srcRect, destRect, Vector2{ 0,0 }, 0.0f, WHITE);
 }
 
