@@ -142,6 +142,7 @@
     <ClInclude Include="arr.h" />
     <ClInclude Include="boss.h" />
     <ClInclude Include="game_manager.h" />
+    <ClInclude Include="level.h" />
     <ClInclude Include="simple_attack.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="special_attack.h" />

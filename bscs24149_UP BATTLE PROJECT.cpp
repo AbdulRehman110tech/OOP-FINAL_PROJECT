@@ -22,7 +22,7 @@ int main(){
 	knight.SetSpeed(10.0f);
 	knight.SetPosition(Vector2{ 0,300 });
 
-	enemy e("kuta",50, 0, "falto",1, "assests/little(attack).png","assests/gorilla(damage).png");
+	enemy e("kuta",50, 0, "falto",0.9, "assests/little(attack).png","assests/gorilla(damage).png");
 	e.LoadTextureFromFile("assests/little(idle).png");e.SetSpeed(2.0f);
 
 	DA<enemy> e1(e);
@@ -99,7 +99,7 @@ int main(){
 			}
 
 			else if (IsKeyDown(KEY_K)) {
-				knight.draw_text_call(0, knight.return_facing());
+				knight.draw_text_call(1, knight.return_facing());
 				for (int i = 0;i < e1.size();i++) {
 					e1[i].set_state(CheckCollisionRecs(knight.get_Tec(), e1[i].get_Tec()));
 				}
@@ -116,7 +116,6 @@ int main(){
 
 				}
 			}
-
 
 			else if (IsKeyPressed(KEY_L) && knight.allow_sp_attack()) {
 				knight.draw_text_call(2, knight.return_facing());
