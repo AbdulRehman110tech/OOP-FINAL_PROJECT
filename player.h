@@ -17,7 +17,7 @@ class player : public character {
 	const float maxCooldown = 0.5f;
 public : 
 	player();
-	player(const String& _n, float h_p, float Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename);
+	player(const String& _n, float h_p, float Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename, const char* file);
 	player(const player& other);
 	player& operator=(const player& other);
 

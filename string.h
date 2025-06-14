@@ -47,6 +47,13 @@ public:
 	String* tokenization(const char* delium, int& count) const;
 	// Concatenation
 	String Concatenation(const String& s1);
+	int return_length() { return this->s; };
+
+	char* data() {
+		return this->cs;
+	}
+
+	const char* data() const { return this->cs; };
 	// destructor
 	~String();
 };
