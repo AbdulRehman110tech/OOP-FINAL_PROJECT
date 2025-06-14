@@ -12,7 +12,8 @@ using namespace std;
 
 class boss :public enemy{
 special_attack a2;
-	
+float damageCooldown = 0.0f;
+const float maxCooldown = 0.5f;
 public : 
 	boss() = default;
 	boss(const boss& other);
@@ -43,6 +44,25 @@ public :
 
 	void set_power() {
 		this->a2.set_current_power();
+	}
+
+	bool can_take_damage() const {
+		if (damageCooldown <= 0.0f) {
+			return true;
+		}
+		else {
+			return false;
+		}
+
+	}
+
+	void reset_damage_cooldown() {
+		damageCooldown = maxCooldown;
+	}
+
+	void update_cooldown() {
+		if (damageCooldown > 0.0f)
+			damageCooldown -= GetFrameTime();
 	}
 };
 

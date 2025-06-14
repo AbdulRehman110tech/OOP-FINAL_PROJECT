@@ -74,10 +74,10 @@ int main(){
 	Texture2D fight = LoadTexture("assests/fight(image).png");
 	Texture2D boss1 = LoadTexture("assests/boss.png");
 	SetTargetFPS(60);
-	// last boot ke hp par band karwadena loop aur phir boss wala start kar dena 
 	while (!WindowShouldClose() && knight.return_status() && b1.return_status()) {
 		BeginDrawing();
 		knight.update_cooldown();
+		b1.update_cooldown();
 		DrawTexturePro(background, Rectangle{ 0, 0, (float)background.width, (float)background.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
 		knight.DrawRectangle_hp(10, 10, 20);
 		knight.DrawRectangleLines_hp(10, 10, 201, 21);
@@ -304,7 +304,10 @@ int main(){
 		else {
 			player1_state = CheckCollisionRecs(knight.get_Tec(), b1.get_Tec());
 			if (player1_state && b1.allow_sp_attack()) {
-				b1.draw_special_power(b1.return_moving_right());
+				if (b1.can_take_damage()) {
+					b1.draw_special_power(b1.return_moving_right());
+					b1.reset_damage_cooldown();
+				}
 				if (knight.can_take_damage()) {
 					knight.chek_collision(true, b1.return_damage_of_attack());
 					knight.reset_damage_cooldown();

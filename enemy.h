@@ -7,6 +7,7 @@
 class enemy : public character{
 	Simple_Attack a;
 	Texture damage;
+	
 	int attack_count;
 	bool movingright, state_hit;
 public : 
@@ -18,11 +19,11 @@ public :
   void receiveDamage(float base_damage) override;
   void movecharacter(float x) {
 	  if (!this->chekposition_x(GetScreenWidth(), GetScreenHeight())) {
-		  if (position.x < x-10) {
+		  if (position.x < x) {
 			  position.x += speed ;
 			  this->set_right_face(true);
 		  }
-		  else if (position.x-10 > x) {
+		  else if (position.x > x) {
 			  position.x -= speed ;
 			  this->set_right_face(false);
 		  }
@@ -105,5 +106,8 @@ public :
   void set_attack() {
 	  this->attack_count -=1;
   }
+
+ 
+
 
 };
