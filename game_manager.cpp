@@ -88,6 +88,9 @@ void game_manager::menue_select_player(const char* filename) {
 }
 
 void game_manager::run_PVP(int index1,int index2) {
+
+	bool move = true;
+	Texture2D fight = LoadTexture("assests/fight(image).png");
 	player one, two;
 	one = list[index1];
 	two = list[index2];
@@ -98,6 +101,17 @@ void game_manager::run_PVP(int index1,int index2) {
 	bool player2_state = false;
 	while (!WindowShouldClose() && one.return_status() && two.return_status()) {
 		BeginDrawing();
+
+		while (move) {
+			BeginDrawing();
+			DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), BLACK);
+			DrawTexturePro(fight, Rectangle{ 0,0,(float)fight.width,(float)fight.height }, Rectangle{ 300,30,(float)fight.width,(float)fight.height }, Vector2{ 0,0 }, (float)0.0f, WHITE);
+			DrawText("Press Spcae bar to continue  ", 300, 450, 20, RED);
+			if (IsKeyPressed(KEY_SPACE)) {
+				move = false;
+			}
+			EndDrawing();
+		} 
 		DrawTexturePro(background, Rectangle{ 0, 0, (float)background.width, (float)background.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
 		one.DrawRectangle_hp(10, 10, 20);
 		one.DrawRectangleLines_hp(10, 10, 201, 21);
@@ -278,5 +292,6 @@ void game_manager::run_PVP(int index1,int index2) {
 	}
 	UnloadTexture(background);
 	UnloadTexture(win1);
+	UnloadTexture(fight);
 	UnloadTexture(win2);
 }

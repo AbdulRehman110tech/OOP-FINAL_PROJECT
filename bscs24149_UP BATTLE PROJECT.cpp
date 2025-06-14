@@ -25,10 +25,10 @@ int main(){
 	knight.SetSpeed(10.0f);
 	knight.SetPosition(Vector2{ 0,300 });
 
-	enemy e("kuta",50, 0, "falto",0.9, "assests/little(attack).png","assests/gorilla(damage).png");
+	enemy e("kuta",50, 0, "falto",1, "assests/little(attack).png","assests/gorilla(damage).png",3);
 	e.LoadTextureFromFile("assests/little(idle).png");
 	
-	enemy e2	("kuta",100, 0, "falto",0.9, "assests/fighter3(J).png", "assests/fighter3(D).png");
+	enemy e2	("kuta",100, 0, "falto",1, "assests/fighter3(J).png", "assests/fighter3(D).png",7);
 	e2.LoadTextureFromFile("assests/fighter3.png");e2.SetSpeed(2.0f);
 
 	DA<enemy> e1(e);
@@ -68,7 +68,8 @@ int main(){
 
 
 	bool player1_state = false;
-	bool move = true,all_true = true;
+	bool move = true, all_true = true;
+	int c = 0;
 	Texture2D background = LoadTexture("assests/background1.png");
 	Texture2D fight = LoadTexture("assests/fight(image).png");
 	Texture2D boss1 = LoadTexture("assests/boss.png");
@@ -76,6 +77,7 @@ int main(){
 	// last boot ke hp par band karwadena loop aur phir boss wala start kar dena 
 	while (!WindowShouldClose() && knight.return_status() && b1.return_status()) {
 		BeginDrawing();
+		knight.update_cooldown();
 		DrawTexturePro(background, Rectangle{ 0, 0, (float)background.width, (float)background.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
 		knight.DrawRectangle_hp(10, 10, 20);
 		knight.DrawRectangleLines_hp(10, 10, 201, 21);
@@ -88,32 +90,40 @@ int main(){
 			b1.draw_border_of_power(880, 28, 101, 11);
 		}
 		
-		if (move) {
-			if (all_true) {
+		while (move) {
+			BeginDrawing();
+				DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), BLACK);
 				DrawTexturePro(fight, Rectangle{ 0,0,(float)fight.width,(float)fight.height }, Rectangle{ 300,30,(float)fight.width,(float)fight.height }, Vector2{ 0,0 }, (float)0.0f, WHITE);
-				DrawText("Press Spcae bar to hide this ", 300, 450, 20, BLACK);
-			}
-			else {
-				move = true;
-				DrawTexturePro(boss1, Rectangle{ 0,0,(float)fight.width,(float)fight.height }, Rectangle{ 300,30,(float)fight.width,(float)fight.height }, Vector2{ 0,0 }, (float)0.0f, WHITE);
-				DrawText("Press Spcae bar to hide this ", 300, 450, 20, BLACK);
-			}
-			
+				DrawText("Press Spcae bar to continue  ", 300, 450, 20, RED);
 			if (IsKeyPressed(KEY_SPACE)) {
 				move = false;
 			}
+			EndDrawing();
 		}
+
+		while (c == 1) {
+			BeginDrawing();
+			DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), BLACK);
+			DrawTexturePro(boss1, Rectangle{ 0,0,(float)boss1.width,(float)boss1.height }, Rectangle{ 300,30,(float)boss1.width,(float)boss1.height }, Vector2{ 0,0 }, (float)0.0f, WHITE);
+			DrawText("Press Spcae bar to continue ", 310, 450, 20, RED);
+			if (IsKeyPressed(KEY_SPACE)) {
+				c++;
+			}
+			EndDrawing();
+		}
+
 
 	if (move == false) {
 		if (all_true) {
 			for (int i = 0;i < e1.size();i++) {
-				e1[i].movecharacter(knight.return_position_of_x());
+				if (!CheckCollisionRecs(knight.get_Tec(), e1[i].get_Tec())) { e1[i].movecharacter(knight.return_position_of_x()); }
 			}
 		}
 		else {
-			b1.movecharacter(knight.return_position_of_x());
+			if (!CheckCollisionRecs(knight.get_Tec(), b1.get_Tec())) {
+				b1.movecharacter(knight.return_position_of_x());
+			}
 		}
-		
 	}
 
 		if (IsKeyDown(KEY_J) || IsKeyDown(KEY_K) || IsKeyDown(KEY_L)) {
@@ -188,7 +198,7 @@ int main(){
 				}
 			}
 
-			else if (IsKeyPressed(KEY_L) && knight.allow_sp_attack()) {
+			else if (IsKeyDown(KEY_L) && knight.allow_sp_attack()) {
 				knight.draw_special_power( knight.return_facing());
 				if (all_true) {
 					for (int i = 0;i < e1.size();i++) {
@@ -261,12 +271,17 @@ int main(){
 				player1_state = CheckCollisionRecs(knight.get_Tec(), e1[i].get_Tec());
 				// player  movement 
 				if (player1_state && !(IsKeyDown(KEY_J)) && !(IsKeyDown(KEY_K)) && !(IsKeyDown(KEY_L))) {
-					e1[i].draw_text_call(e1[i].return_moving_right());
-					knight.chek_collision(player1_state, e1[i].return_damage_of_attack());
-					if (knight.return_status() == false) {
-						break;
-					}
-
+						e1[i].draw_text_call(e1[i].return_moving_right());
+						if (knight.can_take_damage()) {
+							knight.chek_collision(true, e1[i].return_damage_of_attack());
+							knight.reset_damage_cooldown();
+						}
+						if (knight.return_status() == false) {
+							break;
+						}
+						else {
+							e1[i].set_attack();
+						}
 				}
 				else {
 					if (!e1[i].return_set_state()) {
@@ -280,7 +295,7 @@ int main(){
 					else {
 						e1[i].damage_pic(true);
 						e1[i].DrawRectangle_hp(780 - i * 220, 10, 20);
-						e1[i].DrawRectangleLines_hp(780 - i * 220, 10, 201, 21);
+						e1[i].DrawRectangleLines_hp(780 - i * 220, 10, 51, 21);
 						e1[i].set_state(false);
 					}
 				}
@@ -290,20 +305,29 @@ int main(){
 			player1_state = CheckCollisionRecs(knight.get_Tec(), b1.get_Tec());
 			if (player1_state && b1.allow_sp_attack()) {
 				b1.draw_special_power(b1.return_moving_right());
-				knight.chek_collision(player1_state, b1.return_dm_of_special());
+				if (knight.can_take_damage()) {
+					knight.chek_collision(true, b1.return_damage_of_attack());
+					knight.reset_damage_cooldown();
+				}
+
 				if (knight.return_status() == false) {
 					break;
 				}
 				b1.set_power();
 			}
 			else if (player1_state && !(IsKeyDown(KEY_J)) && !(IsKeyDown(KEY_K)) && !(IsKeyDown(KEY_L))) {
-				b1.draw_text_call(b1.return_moving_right());
-				knight.chek_collision(player1_state, b1.return_damage_of_attack());
-				if (knight.return_status() == false) {
-					break;
-				}else{
-					b1.add_power(2);
-				}
+					b1.draw_text_call(b1.return_moving_right());
+					if (knight.can_take_damage()) {
+						knight.chek_collision(true, b1.return_damage_of_attack());
+						knight.reset_damage_cooldown();
+					}
+					if (knight.return_status() == false) {
+						break;
+					}
+					else {
+						b1.add_power(2);
+						b1.set_attack();
+					}
 			}
 			else {
 				if (!b1.return_set_state()) {
@@ -325,6 +349,7 @@ int main(){
 
 		if (e1.size() <= 0) {
 			all_true = false;
+			c++;
 		}
 	
 }

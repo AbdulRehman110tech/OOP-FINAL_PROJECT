@@ -23,7 +23,7 @@ public :
 		return *this;
 
 	}
-	int return_damage() { return this->damage_percent; };
+	float return_damage() { return this->damage_percent; };
 	void virtual draw_texture(Vector2 position, bool facingRight) = 0;
 	void virtual unload_texture() = 0;
 	virtual ~Attack() {};

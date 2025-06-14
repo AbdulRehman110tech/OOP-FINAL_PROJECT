@@ -7,16 +7,17 @@
 class enemy : public character{
 	Simple_Attack a;
 	Texture damage;
+	int attack_count;
 	bool movingright, state_hit;
 public : 
 	enemy() = default;
 	void damage_pic(bool collision);
 	enemy(const enemy& other);
-	enemy(const String& _n, int h_p, int Defence, const String& nam, float damaj, const char* filename,const char*filename2);
+	enemy(const String& _n, float h_p, float Defence, const String& nam, float damaj, const char* filename,const char*filename2,int ac);
 	enemy&  operator=(const enemy & other); 
   void receiveDamage(float base_damage) override;
   void movecharacter(float x) {
-	  if (!this->chekposition_x(1000, 470)) {
+	  if (!this->chekposition_x(GetScreenWidth(), GetScreenHeight())) {
 		  if (position.x < x-10) {
 			  position.x += speed ;
 			  this->set_right_face(true);
@@ -85,6 +86,24 @@ public :
 
   float return_damage_of_attack() {
 	  return a.return_damage();
+  }
+
+  bool can_attack() {
+	  if (this->attack_count <= 0) {
+		  return false;
+	  }
+	  else
+	  {
+		  return true;
+	  }
+  }
+
+  int retun_attck() {
+	  return this->attack_count;
+  }
+
+  void set_attack() {
+	  this->attack_count -=1;
   }
 
 };

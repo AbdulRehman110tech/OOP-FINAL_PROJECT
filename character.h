@@ -7,8 +7,8 @@ using namespace std;
 class character {
 protected:
 	String name;
-	int H_P, Def;
-	int current_hp;
+	float H_P, Def;
+	float current_hp;
 	bool status;
 	// raylib shit 
 
@@ -19,7 +19,7 @@ protected:
 
 public:
 	character() = default;
-	character(String _n, int h_p, int Defence) : name{ _n }, H_P{ h_p }, current_hp{ h_p }, Def{ Defence }, status{ true } {};
+	character(String _n, float h_p, float Defence) : name{ _n }, H_P{ h_p }, current_hp{ h_p }, Def{ Defence }, status{ true } {};
 	character(const character& other) : name{ other.name }, H_P{ other.H_P }, current_hp{ other.current_hp }, Def{ other.Def }, status{ other.status }, position{ other.position }, speed{ other.speed } {
 		Image temp = LoadImageFromTexture(other.texture);
 		texture = LoadTextureFromImage(temp);

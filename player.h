@@ -13,9 +13,11 @@ class player : public character {
 	bool facing;
 	special_attack only;
 	Texture2D temp;
+	float damageCooldown = 0.0f;
+	const float maxCooldown = 0.5f;
 public : 
 	player();
-	player(const String& _n, int h_p, int Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename);
+	player(const String& _n, float h_p, float Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename);
 	player(const player& other);
 	player& operator=(const player& other);
 
@@ -35,7 +37,7 @@ public :
 		return { this->position.x,position.y,(float)texture.width/2,(float)texture.height/2};
 	}
 
-	void chek_collision(bool istrue, int base_damage) ;
+	void chek_collision(bool istrue, float base_damage) ;
 
 	void damage_pic(bool collision) {
 		if (collision) {
@@ -79,6 +81,26 @@ public :
 	int return_position_of_x() {
 		return  this->position.x;
 	}
+
+	bool can_take_damage() const {
+		if (damageCooldown <= 0.0f) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		
+	}
+
+	void reset_damage_cooldown() {
+		damageCooldown = maxCooldown;
+	}
+
+	void update_cooldown() {
+		if (damageCooldown > 0.0f)
+			damageCooldown -= GetFrameTime(); 
+	}
+
 
 };
 

@@ -3,7 +3,7 @@
 
 
 player::player() :score{ 0 }, only{}, moves{}, facing{true} {}
-player::player(const String& _n, int h_p, int Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename) : only{ others }, moves{ other }, character{ _n, h_p, Defence }, score{ 0 }, facing{ true } { temp = LoadTexture(filename); }
+player::player(const String& _n, float h_p, float Defence, DA <Simple_Attack>& other, const special_attack& others, const char* filename) : only{ others }, moves{ other }, character{ _n, h_p, Defence }, score{ 0 }, facing{ true } { temp = LoadTexture(filename); }
 player::player(const player& other) : score{ other.score }, character{ other }, moves{ other.moves }, only{ other.only } {
 	Image temp1 = LoadImageFromTexture(other.temp);
 	temp = LoadTextureFromImage(temp1);
@@ -47,14 +47,14 @@ float player::return_dm_of_special() {
 void player::receiveDamage(float base_damage) {
 
 	float temp1 = base_damage - this->return_this_def();
-	int temp = this->return_cr_hp() - temp1;
+	float temp = this->return_cr_hp() - temp1;
 	this->set_cr_hp(temp);
 	if (this->return_cr_hp() <= 0) {
 		this->set_status(false);
 	}
 }
 
-void player::chek_collision(bool istrue, int base_damage) {
+void player::chek_collision(bool istrue, float base_damage) {
 	if (istrue) {
 		this->receiveDamage(base_damage);
 	}

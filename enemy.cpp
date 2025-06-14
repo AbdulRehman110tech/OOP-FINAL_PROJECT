@@ -1,6 +1,6 @@
 #include "enemy.h"
 
-enemy::enemy(const String& _n, int h_p, int Defence, const String& nam, float damaj, const char* filename, const char* filename2) :character{ _n,h_p,Defence }, a{ damaj,nam,filename }, movingright{ false }, state_hit{false} { damage = LoadTexture(filename2); }
+enemy::enemy(const String& _n, float h_p, float Defence, const String& nam, float damaj, const char* filename, const char* filename2, int ac) :character{ _n,h_p,Defence }, a{ damaj,nam,filename }, movingright{ false }, state_hit{ false }, attack_count{ac} { damage = LoadTexture(filename2); }
 enemy::enemy(const enemy& other) :character{ other } {
 	Image temp1 = LoadImageFromTexture(other.damage);
 	damage = LoadTextureFromImage(temp1);
@@ -27,7 +27,7 @@ void enemy::damage_pic(bool collision) {
 
 void enemy::receiveDamage(float base_damage) {
 	float temp1 = base_damage - this->return_this_def();
-	int temp = this->return_cr_hp() - temp1;
+	float temp = this->return_cr_hp() - temp1;
 	this->set_cr_hp(temp);
 	if (this->return_cr_hp() <= 0) {
 		this->set_status(false);
