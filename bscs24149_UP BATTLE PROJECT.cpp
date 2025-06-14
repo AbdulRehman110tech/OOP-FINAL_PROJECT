@@ -14,6 +14,9 @@ using namespace std;
 
 game_manager * game_manager::instance = nullptr;
 int main(){
+	fstream f("filename.bin", ios::out | ios::in | ios::binary);
+	fstream f2("filename2.bin", ios::out | ios::in | ios::binary);
+
 	InitWindow(1000, 470, "Battle Game");
 	
 	DA <Simple_Attack> a (Simple_Attack(3, "Punch", "assests/fighter1(J).png"));

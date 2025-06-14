@@ -12,7 +12,7 @@ protected:
 	float current_hp;
 	bool status;
 	// raylib shit 
-	const char* file;
+	
 	Texture2D texture;
 	Vector2 position;
 	float speed;
@@ -20,8 +20,8 @@ protected:
 
 public:
 	character() = default;
-	character(String _n, float h_p, float Defence, const char* filename) : name{ _n }, H_P{ h_p }, current_hp{ h_p }, Def{ Defence }, status{ true }, file{filename} {};
-	character(const character& other) : name{ other.name }, H_P{ other.H_P }, current_hp{ other.current_hp }, Def{ other.Def }, status{ other.status }, position{ other.position }, speed{ other.speed },file{other.file} {
+	character(String _n, float h_p, float Defence) : name{ _n }, H_P{ h_p }, current_hp{ h_p }, Def{ Defence }, status{ true } {};
+	character(const character& other) : name{ other.name }, H_P{ other.H_P }, current_hp{ other.current_hp }, Def{ other.Def }, status{ other.status }, position{ other.position }, speed{ other.speed } {
 		Image temp = LoadImageFromTexture(other.texture);
 		texture = LoadTextureFromImage(temp);
 		UnloadImage(temp);
@@ -132,18 +132,18 @@ public:
 			
 		Texture2D return_texture() { return this->texture; }
 		
-		void rakhwana(std::fstream& f) {
+		/*void rakhwana(std::fstream& f) {
 			f.write((char*)name.data(), name.return_length());
 			f.write((char*)&H_P,sizeof(H_P));
 			f.write((char*)&Def, sizeof(Def));
 			f.write((char*)file, sizeof(file));
-		}
+		}*/
 		
-		void load(std::fstream& f) {
+		/*void load(std::fstream& f) {
 			f.read((char*)name.data(), name.return_length());
 			f.read((char*)&H_P,sizeof(H_P));
 			f.read((char*)&Def,sizeof(Def));
 			f.read((char*)file, sizeof(file));
-		}
+		}*/
 };
 

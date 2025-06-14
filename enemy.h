@@ -15,7 +15,7 @@ public :
 	enemy() = default;
 	void damage_pic(bool collision);
 	enemy(const enemy& other);
-	enemy(const String& _n, float h_p, float Defence, const String& nam, float damaj, const char* filename,const char*filename2,int ac, const char* file);
+	enemy(const String& _n, float h_p, float Defence, const String& nam, float damaj, const char* filename,const char*filename2,int ac);
 	enemy&  operator=(const enemy & other); 
   void receiveDamage(float base_damage) override;
   void movecharacter(float x) {

@@ -1,6 +1,6 @@
 #include "enemy.h"
 
-enemy::enemy(const String& _n, float h_p, float Defence, const String& nam, float damaj, const char* filename, const char* filename2, int ac, const char* file) :character{ _n,h_p,Defence,file }, a{ damaj,nam,filename }, movingright{ false }, state_hit{ false }, attack_count{ac} { damage = LoadTexture(filename2); }
+enemy::enemy(const String& _n, float h_p, float Defence, const String& nam, float damaj, const char* filename, const char* filename2, int ac) :character{ _n,h_p,Defence }, a{ damaj,nam,filename }, movingright{ false }, state_hit{ false }, attack_count{ac} { damage = LoadTexture(filename2); }
 enemy::enemy(const enemy& other) :character{ other } {
 	Image temp1 = LoadImageFromTexture(other.damage);
 	damage = LoadTextureFromImage(temp1);
