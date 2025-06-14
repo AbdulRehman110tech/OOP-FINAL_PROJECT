@@ -16,8 +16,7 @@ void game_manager::show_menue(const char* filename) {
 		DrawText("EXIT (E)", pvpButton3.x + 40, pvpButton3.y + 15, 80, RED);
 		EndDrawing();
 		if (IsKeyDown(KEY_P)) {
-			this->menue_select_player("assests/player.png");
-			
+			this->menue_select_player_run_pvp("assests/player.png");
 		}
 		else if (IsKeyDown(KEY_L)) {
 
@@ -30,8 +29,62 @@ void game_manager::show_menue(const char* filename) {
 	UnloadTexture(background_menue);
 }
 
-void game_manager::menue_select_player(const char* filename) {
+void game_manager::menue_select_player_run_lvl(const char* filename) {
+	bool istrue1 = true;
+	int i1 = 0, i2 = 0;
+	int j = 0;
+	Texture2D backgroun_player = LoadTexture(filename);
+	SetTargetFPS(60);
+	while (istrue1) {
+		BeginDrawing();
+		DrawTexturePro(backgroun_player, Rectangle{ 0, 0, (float)backgroun_player.width, (float)backgroun_player.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
+		DrawText("Choose a given player from given set of players : ", 250, 20, 15, ORANGE);
+		DrawText("Press Spcae bar to go to next charactcer ", 250, 430, 15, RED);
 
+		if (IsKeyPressed(KEY_SPACE)) {
+			j++;
+			if (j >= list.size()) {
+				j = 0;
+			}
+
+		}
+		list[j].SetPosition(Vector2{ 400,250 });
+		list[j].DrawCharacter();
+
+		if (IsKeyPressed(KEY_ENTER)) {
+			i1 = j;
+			istrue1 = false;
+		}
+		EndDrawing();
+	}
+	j = 0;
+	bool istrue2 = true;
+	while (istrue2) {
+		BeginDrawing();
+		DrawText("Choose a given player from given set of players player 2: ", 250, 20, 15, ORANGE);
+		DrawText("Press Spcae bar to go to next charactcer ", 250, 430, 15, RED);
+
+		if (IsKeyPressed(KEY_SPACE)) {
+			j++;
+			if (j >= list.size()) {
+				j = 0;
+			}
+
+		}
+		list[j].SetPosition(Vector2{ 400,250 });
+		list[j].DrawCharacter();
+
+
+		if (IsKeyPressed(KEY_ENTER)) {
+			i2 = j;
+			istrue2 = false;
+		}
+		EndDrawing();
+	}
+	//level menue bnan ab 
+}
+
+void game_manager::menue_select_player_run_pvp(const char* filename) {
 	bool istrue1 = true;
 	int i1 = 0, i2 = 0;
 	int j = 0;
@@ -149,12 +202,7 @@ void game_manager::run_PVP(int index1,int index2) {
 				}
 			}
 			else if (IsKeyDown(KEY_L) && one.allow_sp_attack()) {
-				float drawtime = 0.2f;
-				// is ma allow attack ko rakh as chek jab trye ho to okay kar de andar rakh is key released while ke sath aur aus ma sirf picture rakh de ;
-				while (drawtime >= 0.0f) {
 					one.draw_special_power(one.return_facing());
-					drawtime -= GetFrameTime();
-				}
 				// special power ma naam rakhwana ha file ka char aus ka attribute bna de ;
 				player2_state = CheckCollisionRecs(one.get_Tec(), two.get_Tec());
 				two.chek_collision(player2_state, one.return_damage_of_attack(0));

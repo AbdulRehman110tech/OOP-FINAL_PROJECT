@@ -17,7 +17,7 @@ class level {
 public :
 
 	level() = default;
-	level(const DA<enemy>& other, const boss& chaudry, const char* filename,fstream &f) : bots{ other }, b1{ chaudry }, status{ false } { pic_level = LoadTexture(filename); };
+	level(const DA<enemy>& other, const boss& chaudry, const char* filename) : bots{ other }, b1{ chaudry }, status{ false } { pic_level = LoadTexture(filename); };
 	level(const level& other) :bots{ other.bots }, b1{ other.b1 }, status{ other.status } {
 		Image temp = LoadImageFromTexture(other.pic_level);
 		pic_level = LoadTextureFromImage(temp);
@@ -38,12 +38,34 @@ public :
 	}
 
 	void load(fstream& f) {
-		f.write((char*)status, sizeof(status));
+		try {
+			if (f.is_open()) {
+				f.write((char*)status, sizeof(status));
+			}
+			else {
+				throw runtime_error("File could not be opened");
+			}
+		}
+		catch (const exception& e) {
+			cout << "Exception caught" << e.what() << endl;
+		}
+		
 	}
 
 	void unload(fstream& f) {
-		f.read((char*)status, sizeof(status));
+		try {
+			if (f.is_open()) {
+				f.read((char*)status, sizeof(status));
+			}
+			else {
+				throw runtime_error("File could not be opened");
+			}
+		}
+		catch (const exception& e) {
+			cout << "Exception caught" << e.what() << endl;
+		}
 	}
+
 
 
 	void run_game(player& knight) {
@@ -340,8 +362,6 @@ public :
 		UnloadTexture(fight);
 		UnloadTexture(boss1);
 	}
-
-
 };
 // enemies and one boss player not needed just initialize void work logic level array in game maneger status of level locked or un locked an be saved in file and 
 // data present on main can also be saved if needed texture needed of level menue also needed which level to play in manager 
