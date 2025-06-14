@@ -44,7 +44,7 @@ float player::return_dm_of_special() {
 	return this->only.return_damage();
 }
 
-void player::receiveDamage(int base_damage) {
+void player::receiveDamage(float base_damage) {
 
 	float temp1 = base_damage - this->return_this_def();
 	int temp = this->return_cr_hp() - temp1;

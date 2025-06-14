@@ -22,7 +22,7 @@ public :
 	float return_damage_of_attack(int a), return_dm_of_special();
 	void draw_text_call(int a,bool facing);
 	bool allow_sp_attack();
-	void receiveDamage(int base_damage)override;
+	void receiveDamage(float base_damage)override;
 	void unloading();
 	bool return_facing() {
 		return this->facing;

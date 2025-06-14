@@ -25,7 +25,7 @@ void enemy::damage_pic(bool collision) {
 	}
 }
 
-void enemy::receiveDamage(int base_damage) {
+void enemy::receiveDamage(float base_damage) {
 	float temp1 = base_damage - this->return_this_def();
 	int temp = this->return_cr_hp() - temp1;
 	this->set_cr_hp(temp);

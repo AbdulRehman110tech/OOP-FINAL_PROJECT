@@ -14,14 +14,14 @@ public :
 	enemy(const enemy& other);
 	enemy(const String& _n, int h_p, int Defence, const String& nam, float damaj, const char* filename,const char*filename2);
 	enemy&  operator=(const enemy & other); 
-  void receiveDamage(int base_damage);
+  void receiveDamage(float base_damage) override;
   void movecharacter(float x) {
 	  if (!this->chekposition_x(1000, 470)) {
-		  if (position.x < x-1) {
+		  if (position.x < x-10) {
 			  position.x += speed ;
 			  this->set_right_face(true);
 		  }
-		  else if (position.x-1 > x) {
+		  else if (position.x-10 > x) {
 			  position.x -= speed ;
 			  this->set_right_face(false);
 		  }
@@ -54,7 +54,7 @@ public :
 	  return this->state_hit;
   }
 
-  void chek_collision(bool istrue, int base_damage) {
+  void chek_collision(bool istrue, float base_damage) {
 	  if (istrue) {
 		  this->receiveDamage(base_damage);
 	  }

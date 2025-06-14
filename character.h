@@ -42,7 +42,7 @@ public:
 	virtual ~character() {}
 
 
-	virtual void receiveDamage(int base_damage) = 0;
+	virtual void receiveDamage(float base_damage) = 0;
 	String return_name() { return this->name; };
 
 	int return_cr_hp() { return this->current_hp; }
