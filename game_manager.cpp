@@ -34,6 +34,7 @@ void game_manager::menue_select_player_run_lvl(const char* filename) {
 	int j = 0;
 	Texture2D backgroun_player = LoadTexture(filename);
 	player one;
+
 	SetTargetFPS(60);
 	while (istrue1) {
 		BeginDrawing();
@@ -126,6 +127,8 @@ void game_manager::run_PVP(int index1,int index2) {
 	player one, two;
 	one = list[index1];
 	two = list[index2];
+	float temp_one = one.return_cr_hp();
+	float temp_two = two.return_cr_hp();
 	Texture2D background = LoadTexture("assests/background1.png");
 	one.SetPosition(Vector2{0,300});
 	two.SetPosition(Vector2{800,300});
@@ -146,11 +149,11 @@ void game_manager::run_PVP(int index1,int index2) {
 		} 
 		DrawTexturePro(background, Rectangle{ 0, 0, (float)background.width, (float)background.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
 		one.DrawRectangle_hp(10, 10, 20);
-		one.DrawRectangleLines_hp(10, 10, 201, 21);
+		one.DrawRectangleLines_hp(10, 10, temp_one+1, 21);
 		one.draw_power_bar(10, 28, 10);
 		one.draw_border_of_power(10, 28, 101, 11);
 		two.DrawRectangle_hp(780, 10, 20);
-		two.DrawRectangleLines_hp(780, 10, 201, 21);
+		two.DrawRectangleLines_hp(780, 10, temp_two+1, 21);
 		two.draw_power_bar(880, 28, 10);
 		two.draw_border_of_power(880, 28, 101, 11);
 		if (IsKeyDown(KEY_J) || IsKeyDown(KEY_K) || IsKeyDown(KEY_L)) {

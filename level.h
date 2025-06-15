@@ -70,8 +70,6 @@ public :
 		}
 	}
 
-
-
 	void run_game(player& knight) {
 		bool player1_state = false;
 		bool move = true, all_true = true;
@@ -80,6 +78,8 @@ public :
 		for (int i = 0;i < bots.size();i++) {
 			bots[i].SetSpeed(i + 1);
 		}
+		float temp = bots[0].return_cr_hp();
+		float boss_temp = b1.return_cr_hp();
 		for (int i = 0;i < bots.size();i++) {
 			bots[i].setting_position(playerPos);
 		}
@@ -100,7 +100,7 @@ public :
 			knight.draw_border_of_power(10, 28, 101, 11);
 			if (all_true == false) {
 				b1.DrawRectangle_hp(780, 10, 20);
-				b1.DrawRectangleLines_hp(780, 10, 201, 21);
+				b1.DrawRectangleLines_hp(780, 10, boss_temp+1, 21);
 				b1.draw_power_bar(880, 28, 10);
 				b1.draw_border_of_power(880, 28, 101, 11);
 			}
@@ -310,7 +310,7 @@ public :
 						else {
 							bots[i].damage_pic(true);
 							bots[i].DrawRectangle_hp(780 - i * 220, 10, 20);
-							bots[i].DrawRectangleLines_hp(780 - i * 220, 10, 51, 21);
+							bots[i].DrawRectangleLines_hp(780 - i * 220, 10, temp+1, 21);
 							bots[i].set_state(false);
 						}
 					}

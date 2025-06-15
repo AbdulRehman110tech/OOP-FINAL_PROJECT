@@ -81,6 +81,8 @@ public :
 	  DrawRectangle(x, y, this->current_hp, height, GREEN);
 
   };
+
+ 
   void DrawRectangleLines_hp(int posX, int posY, int width, int height) {
 	  DrawRectangleLinesEx(Rectangle{ (float)posX,(float)posY,(float)width,(float)height }, 3.5, BLACK);
 
