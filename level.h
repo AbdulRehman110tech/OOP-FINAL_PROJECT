@@ -13,7 +13,6 @@ class level {
 	boss b1;
 	bool status;
 	Texture2D pic_level;
-	fstream file;
 public :
 
 	level() = default;
@@ -30,8 +29,13 @@ public :
 		pic_level = LoadTextureFromImage(temp);
 		UnloadImage(temp);
 		status = other.status;
+		return *this;
 	}
 
+
+	void Draw_texture() {
+		DrawTexturePro(pic_level, Rectangle{ 0,0,(float)pic_level.width,(float)pic_level.height }, Rectangle{ 300,30,(float)pic_level.width,(float)pic_level.height }, Vector2{0,0},0.0f,WHITE);
+	}
 	bool return_state() { return status; }
 	void set_status(bool istrue) {
 		status = istrue;
@@ -72,6 +76,15 @@ public :
 		bool player1_state = false;
 		bool move = true, all_true = true;
 		int c = 0;
+		Vector2 playerPos = knight.GetPosition();  // Get player's current position
+		for (int i = 0;i < bots.size();i++) {
+			bots[i].SetSpeed(i + 1);
+		}
+		for (int i = 0;i < bots.size();i++) {
+			bots[i].setting_position(playerPos);
+		}
+		b1.SetPosition(Vector2{ 800,300 });
+		knight.SetPosition(Vector2{ 0,300 });
 		Texture2D background = LoadTexture("assests/background1.png");
 		Texture2D fight = LoadTexture("assests/fight(image).png");
 		Texture2D boss1 = LoadTexture("assests/boss.png");
@@ -87,7 +100,7 @@ public :
 			knight.draw_border_of_power(10, 28, 101, 11);
 			if (all_true == false) {
 				b1.DrawRectangle_hp(780, 10, 20);
-				b1.DrawRectangleLines_hp(780, 10, 101, 21);
+				b1.DrawRectangleLines_hp(780, 10, 201, 21);
 				b1.draw_power_bar(880, 28, 10);
 				b1.draw_border_of_power(880, 28, 101, 11);
 			}
@@ -358,9 +371,32 @@ public :
 			}
 
 		}
+
+		if (knight.return_status()) {
+			this->status = true;
+		}
+		Texture2D win1 = LoadTexture("assests/win.png");
+		Texture2D lose = LoadTexture("assests/lose.png");
+		while (!IsKeyPressed(KEY_ENTER)) {
+			BeginDrawing();
+			DrawText("Press Enter to Continue", 300, 20, 100, RED);
+			if (knight.return_status()) {
+				DrawTexturePro(win1, Rectangle{ 0,0,(float)win1.width,(float)win1.height }, Rectangle{ 0,0,(float)GetScreenWidth(),(float)GetScreenHeight() }, Vector2{ 0,0 }, (float)0.0f, WHITE);
+			}
+			else {
+				DrawTexturePro(lose, Rectangle{ 0,0,(float)lose.width,(float)lose.height }, Rectangle{ 300,30,(float)GetScreenWidth(),(float)GetScreenHeight() }, Vector2{ 0,0 }, (float)0.0f, WHITE);
+			}
+			EndDrawing();
+		}
+		UnloadTexture(win1);
+		UnloadTexture(lose);
 		UnloadTexture(background);
 		UnloadTexture(fight);
 		UnloadTexture(boss1);
+	}
+
+	~level() {
+		UnloadTexture(pic_level);
 	}
 };
 // enemies and one boss player not needed just initialize void work logic level array in game maneger status of level locked or un locked an be saved in file and 

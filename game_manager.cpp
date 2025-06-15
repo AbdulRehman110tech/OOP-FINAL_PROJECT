@@ -1,5 +1,5 @@
 #include "game_manager.h"
-
+#include <string>
 //game_manager::game_manager(const DA <player>& other) : list{other} {}
 void game_manager::show_menue(const char* filename) {
 	bool istrue = true;
@@ -19,7 +19,7 @@ void game_manager::show_menue(const char* filename) {
 			this->menue_select_player_run_pvp("assests/player.png");
 		}
 		else if (IsKeyDown(KEY_L)) {
-
+			this->menue_select_player_run_lvl("assests/player.png");
 		}
 		else if (IsKeyDown(KEY_E)) {
 			istrue = false;
@@ -31,9 +31,9 @@ void game_manager::show_menue(const char* filename) {
 
 void game_manager::menue_select_player_run_lvl(const char* filename) {
 	bool istrue1 = true;
-	int i1 = 0, i2 = 0;
 	int j = 0;
 	Texture2D backgroun_player = LoadTexture(filename);
+	player one;
 	SetTargetFPS(60);
 	while (istrue1) {
 		BeginDrawing();
@@ -52,45 +52,44 @@ void game_manager::menue_select_player_run_lvl(const char* filename) {
 		list[j].DrawCharacter();
 
 		if (IsKeyPressed(KEY_ENTER)) {
-			i1 = j;
+			one = list[j];
 			istrue1 = false;
 		}
 		EndDrawing();
 	}
-	j = 0;
-	bool istrue2 = true;
-	while (istrue2) {
-		BeginDrawing();
-		DrawText("Choose a given player from given set of players player 2: ", 250, 20, 15, ORANGE);
-		DrawText("Press Spcae bar to go to next charactcer ", 250, 430, 15, RED);
-
-		if (IsKeyPressed(KEY_SPACE)) {
-			j++;
-			if (j >= list.size()) {
-				j = 0;
+	bool istrue = true;
+	for (int i = 0;i < lists.size();i++) {
+		SetTargetFPS(60);
+		while (istrue) {
+			BeginDrawing();
+			DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), BLACK);
+			lists[i].Draw_texture();
+			string ch = to_string(i+1) ;
+			DrawText(ch.c_str(), 750, 60, 150, RED);
+			DrawText("Press space to continue", 300, 10, 10, WHITE);
+			if (IsKeyPressed(KEY_SPACE)) {
+				istrue = false;
 			}
-
+			EndDrawing();
 		}
-		list[j].SetPosition(Vector2{ 400,250 });
-		list[j].DrawCharacter();
-
-
-		if (IsKeyPressed(KEY_ENTER)) {
-			i2 = j;
-			istrue2 = false;
+		lists[i].run_game(one);
+		if (lists[i].return_state()) {
+			istrue = true;
 		}
-		EndDrawing();
+		else {
+			i--;
+		}
 	}
-	//level menue bnan ab 
 }
 
 void game_manager::menue_select_player_run_pvp(const char* filename) {
 	bool istrue1 = true;
+	bool istrue2 = true;
 	int i1 = 0, i2 = 0;
 	int j = 0;
 	Texture2D backgroun_player = LoadTexture(filename);
 	SetTargetFPS(60);
-	while (istrue1) {
+	while (istrue2) {
 		BeginDrawing();
 		DrawTexturePro(backgroun_player, Rectangle{ 0, 0, (float)backgroun_player.width, (float)backgroun_player.height }, Rectangle{ 0, 0, 1000.0f, 470.0f }, Vector2{ 0, 0 }, (float)0.0f, WHITE);
 		DrawText("Choose a given player from given set of players : ", 250, 20, 15, ORANGE);
@@ -106,31 +105,11 @@ void game_manager::menue_select_player_run_pvp(const char* filename) {
 			list[j].SetPosition(Vector2{ 400,250 });
 			list[j].DrawCharacter();
 		
-		if (IsKeyPressed(KEY_ENTER)) {
+		if (IsKeyPressed(KEY_ENTER) && istrue1) {
 			i1 = j;
 			istrue1 = false;
 		}
-		EndDrawing();
-	}
-	j = 0;
-	bool istrue2 = true;
-	while (istrue2) {
-		BeginDrawing();
-		DrawText("Choose a given player from given set of players player 2: ", 250, 20, 15, ORANGE);
-		DrawText("Press Spcae bar to go to next charactcer ", 250, 430, 15, RED);
-
-		if (IsKeyPressed(KEY_SPACE)) {
-			j++;
-			if (j >= list.size()) {
-				j = 0;
-			}
-
-		}
-		list[j].SetPosition(Vector2{ 400,250 });
-		list[j].DrawCharacter();
-
-
-		if (IsKeyPressed(KEY_ENTER)) {
+		else if(IsKeyPressed(KEY_ENTER) && istrue1 == false){
 			i2 = j;
 			istrue2 = false;
 		}
@@ -263,8 +242,7 @@ void game_manager::run_PVP(int index1,int index2) {
 					}
 				}
 			}
-			else if (IsKeyDown(KEY_B)) {
-				if (two.allow_sp_attack()) {
+			else if (IsKeyDown(KEY_B) && two.allow_sp_attack()) {
 					two.draw_special_power(one.return_facing());
 					player1_state = CheckCollisionRecs(one.get_Tec(), two.get_Tec());
 					one.chek_collision(player1_state, two.return_damage_of_attack(0));
@@ -274,7 +252,6 @@ void game_manager::run_PVP(int index1,int index2) {
 						}
 					}
 					two.set_power();
-				}
 			}
 		}
 		else {
